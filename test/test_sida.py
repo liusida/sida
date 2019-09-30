@@ -5,4 +5,4 @@ def test_fullname():
     assert fullname() == "Sida Liu"
 
 def test_travis():
-    assert False
+    assert True
