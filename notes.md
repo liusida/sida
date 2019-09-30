@@ -4,13 +4,17 @@ Talk Notes from https://www.youtube.com/watch?v=QgZ7qv4Cd0Y
 How To Publish A Package On PyPI
 by Mark Smith
 
-0. Create a new project in github, clone it to local
+## Github
 
-1. src/, put all your source files in there
+Create a new project in github, clone it to local
 
-2. setup.py
+## Source files
 
-3. pipenv
+Create a folder 'src/', put all your source files in there
+
+## setup.py
+
+## pipenv
 
 ```bash
 $pipenv install -e . #install package
@@ -20,7 +24,7 @@ $pipenv shell #start shell
 
 It will create Pipfile.
 
-4. pytest
+## pytest
 
 Create a folder called test, put all your test files in there.
 
@@ -28,7 +32,7 @@ Create a folder called test, put all your test files in there.
 $pytest
 ```
 
-5. Manifest
+## Manifest
 
 Push all change to github, using following tool to create MANIFEST.in
 
@@ -37,13 +41,13 @@ $pip install check-manifest
 $check-manifest --create
 ```
 
-6. Build dist
+## Build dist
 
 ```bash
 $python setup.py bdist_wheel sdist
 ```
 
-7. Twine
+## Twine
 
 Upload to PyPI using following tool
 
@@ -57,9 +61,14 @@ Username and password of PyPI are needed.
 
 or just use any twine to upload it. And before uploading, delete other files in dist/*, otherwise you will get a FileAlreadyExist error from PyPI.
 
+```bash
+$pip install twine
+$twine upload dist/*
+```
+
 Your pip package is on air now!
 
-8. tox
+## tox
 
 Create tox.ini, do testing in variable Python version.
 
@@ -67,7 +76,7 @@ Create tox.ini, do testing in variable Python version.
 tox
 ```
 
-9. automatic testing using travis
+## automatic testing using travis
 
 Create .travis.yml file and push to github, travis will do testing for you.
 
@@ -75,6 +84,8 @@ and you will have an icon: ![travis auto testing](https://travis-ci.org/liusida/
 
 
 ==================================================================
+
+## Automatic
 
 Or, you can simply use Cookiecutter
 
@@ -91,7 +102,7 @@ Answer 100 questions, and done.
 
 Furthermore,
 
-10. scripts, executable
+## Scripts, Executable
 
 If you want to put an executable file in your package, you can create a folder like 'bin/', and in setup.py, add:
 
@@ -99,7 +110,7 @@ If you want to put an executable file in your package, you can create a folder l
     scripts=["bin/sida"],
 ```
 
-11. dependencies
+## Dependencies
 
 If your program is depend on other packages, like 'numpy', in setup.py, add:
 
