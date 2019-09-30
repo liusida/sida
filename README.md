@@ -6,4 +6,3 @@ personal package to pip
 ```python
 pip install sida
 ```
-
