@@ -1,4 +1,4 @@
-![](https://travis-ci.org/liusida/sida.svg?branch=master)
+![travis auto testing](https://travis-ci.org/liusida/sida.svg?branch=master)
 
 # sida
 personal package to pip

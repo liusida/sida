@@ -69,3 +69,5 @@ tox
 
 Create .travis.yml file and push to github, travis will do testing for you.
 
+and you will have an icon: ![travis auto testing](https://travis-ci.org/liusida/sida.svg?branch=master)
+
