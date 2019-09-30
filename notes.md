@@ -86,3 +86,25 @@ $cookiecutter gh:ionelmc/cookiecutter-pylibrary
 ```
 
 Answer 100 questions, and done.
+
+==================================================================
+
+Furthermore,
+
+10. scripts, executable
+
+If you want to put an executable file in your package, you can create a folder like 'bin/', and in setup.py, add:
+
+```python
+    scripts=["bin/sida"],
+```
+
+11. dependencies
+
+If your program is depend on other packages, like 'numpy', in setup.py, add:
+
+```python
+    install_requires=[
+        'numpy',
+    ],
+```
