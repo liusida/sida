@@ -25,3 +25,12 @@ Create a folder called test, put all your test files in there.
 ```bash
 $pytest
 ```
+
+5. Manifest
+
+Push all change to github, using following tool to create MANIFEST.in
+
+```bash
+$pip install check-manifest
+$check-manifest --create
+```
