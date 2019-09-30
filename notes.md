@@ -55,7 +55,7 @@ $twine upload dist/*
 
 Username and password of PyPI are needed.
 
-or just use any twine to upload it.
+or just use any twine to upload it. And before uploading, delete other files in dist/*, otherwise you will get a FileAlreadyExist error from PyPI.
 
 Your pip package is on air now!
 
