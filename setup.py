@@ -5,9 +5,10 @@ with open("README.md","r") as fh:
 
 setup(
     name='sida',
-    version='0.0.1',
+    version='0.0.2',
     description='My first pip package',
     py_modules=["sida"],
+    scripts=["bin/sida"],
     package_dir={'':'src'},
     classifiers=[
         "Programming Language :: Python :: 3",
