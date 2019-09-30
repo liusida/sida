@@ -5,6 +5,7 @@ verify_ssl = true
 
 [dev-packages]
 pytest = ">=3.7"
+twine = "*"
 
 [packages]
 sida = {editable = true,path = "."}
