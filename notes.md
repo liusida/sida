@@ -71,3 +71,16 @@ Create .travis.yml file and push to github, travis will do testing for you.
 
 and you will have an icon: ![travis auto testing](https://travis-ci.org/liusida/sida.svg?branch=master)
 
+
+==================================================================
+
+Or, you can simply use Cookiecutter
+
+https://cookiecutter.readthedocs.io/en/latest/
+
+```bash
+$pip install cookiecutter
+$cookiecutter gh:ionelmc/cookiecutter-pylibrary
+```
+
+Answer 100 questions, and done.
