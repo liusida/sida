@@ -1,4 +1,4 @@
-[img]https://travis-ci.org/liusida/sida.svg?branch=master[/img]
+![https://travis-ci.org/liusida/sida.svg?branch=master]
 
 # sida
 personal package to pip
