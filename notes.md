@@ -56,3 +56,16 @@ $twine upload dist/*
 Username and password of PyPI are needed.
 
 Your pip package is on air now!
+
+8. tox
+
+Create tox.ini, do testing in variable Python version.
+
+```bash
+tox
+```
+
+9. automatic testing using travis
+
+Create .travis.yml file and push to github, travis will do testing for you.
+
