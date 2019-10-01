@@ -22,7 +22,7 @@ $pipenv install --dev "pytest>=3.7" #for test
 $pipenv shell #start shell
 ```
 
-It will create Pipfile.
+It will create Pipfile. (Notice: using `pipenv shell`, and then `pip install package-name` can not let pipenv know the dependencies. Only use pipenv install to install any package. Or, never use `pipenv shell`.)
 
 ## pytest
 
