@@ -12,6 +12,7 @@ numpy = ">=1.16"
 [packages]
 sida = {editable = true,path = "."}
 numpy = ">=1.16"
+matplotlib = "*"
 
 [requires]
 python_version = "3.7"

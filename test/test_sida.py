@@ -1,5 +1,8 @@
 import sida
 
+def test_version():
+    assert sida.__version__ == "0.0.4"
+
 def test_fullname():
     # test full name, run by travis
     assert sida.fullname() == "Sida Liu"
