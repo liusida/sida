@@ -5,7 +5,7 @@ with open("README.md","r") as fh:
 
 setup(
     name='sida',
-    version='0.0.4',
+    version='0.0.5',
     description='My first pip package',
     py_modules=["sida"],
     scripts=["bin/sida"],
