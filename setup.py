@@ -9,7 +9,7 @@ setup(
     description='My first pip package',
     py_modules=["sida"],
     scripts=["bin/sida"],
-    package_dir={'':'src'},
+    package_dir={'':'.'},
     install_requires=[
         'numpy',
     ],
