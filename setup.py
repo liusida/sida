@@ -12,6 +12,7 @@ setup(
     package_dir={'':'.'},
     install_requires=[
         'numpy',
+        'matplotlib',
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
