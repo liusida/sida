@@ -1,18 +1,23 @@
+from setuptools import find_packages
 from setuptools import setup
+from glob import glob
+
 
 with open("README.md","r") as fh:
     long_description = fh.read()
 
 setup(
     name='sida',
-    version='0.0.5',
+    version='0.0.9',
     description='My first pip package',
-    py_modules=["sida"],
-    scripts=["bin/sida"],
-    package_dir={'':'.'},
+    py_modules=[splitext(basename(path))[0] for path in glob('src/*.py')],
+    # scripts=["bin/sida"],
+    packages=find_packages('src'),
+    package_dir={'':'src'},
     install_requires=[
         'numpy',
         'matplotlib',
+        'websocket-client'
     ],
     classifiers=[
         "Programming Language :: Python :: 3",

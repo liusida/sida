@@ -1,5 +1,7 @@
 test/test_data/*.png
-
+.vscode
+.pytest_cache
+.tox
 
 # Created by https://www.gitignore.io/api/python
 # Edit at https://www.gitignore.io/?templates=python

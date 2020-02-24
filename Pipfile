@@ -13,6 +13,7 @@ numpy = ">=1.16"
 sida = {editable = true,path = "."}
 numpy = ">=1.16"
 matplotlib = "*"
+websocket-client = "*"
 
 [requires]
 python_version = "3.7"
