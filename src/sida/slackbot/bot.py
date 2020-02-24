@@ -4,13 +4,16 @@ import urllib
 import urllib.request
 import json
 import sys
+import socket
 
 data1 = [120,111,120,98,45,49,51,57,53,57,48,48,48,50,51,56,57,45,57,52,51,53,50,55,48,51,48,56,54,55,45,111,86,109,84,106,102,102,82,122,102,90,73,108,83,114,117,53,116,77,86,55,55,83,]
-
-sida = "DU30JG05B"
-channel = "GTRFXCMGB"
+channel_sida = "DU30JG05B"
+channel_gpuvoxels_bot = "GTRFXCMGB"
+channel = "" # if you want to know your private channel, use bot.listen() and send "channel" to the bot.
 msg_id = 0
 msg_text = ""
+hostname = socket.gethostname()    
+IPAddr = socket.gethostbyname(hostname)
 
 def start_rtm(number):
     data = [*data1,number]
@@ -33,17 +36,23 @@ def send_msg(ws, channel, message):
     ws.send(reply_str)
 
 def on_open(ws):
-    send_msg(ws, sida, "AUTOMSG: "+msg_text)
+    send_msg(ws, channel, f"[{IPAddr}]: {msg_text}")
     print("Slack message sent: "+msg_text)
     ws.close()
 
 def on_message(ws, msg):
-    print(msg)
+    data = json.loads(msg)
+    if "channel" in data:
+        if "text" in data:
+            if data["text"]=="channel":
+                send_msg(ws, data["channel"], f"This channel is: {data['channel']}")
 
-def send(text, number):
-    global msg_text
+def send(text, number, to_channel="GTRFXCMGB"):
+    global msg_text, channel
+    data = [69,70,71]
     msg_text = text
-    ws_url = start_rtm(number)
+    channel = to_channel
+    ws_url = start_rtm(data[number])
     if ws_url=="":
         return -1
     websocket.enableTrace(False)
@@ -51,5 +60,15 @@ def send(text, number):
     ws.run_forever()
     return 0
 
+def listen(number):
+    data = [69,70,71]
+    ws_url = start_rtm(data[number])
+    if ws_url=="":
+        return -1
+    websocket.enableTrace(False)
+    ws = websocket.WebSocketApp(ws_url, on_message=on_message)
+    ws.run_forever()
+
 if __name__ == "__main__":
-    send("test",0)
+    # listen(1)
+    send("ok", 1, channel_sida)

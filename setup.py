@@ -8,7 +8,7 @@ with open("README.md","r") as fh:
 
 setup(
     name='sida',
-    version='0.0.9',
+    version='0.1.0',
     description='My first pip package',
     py_modules=[splitext(basename(path))[0] for path in glob('src/*.py')],
     # scripts=["bin/sida"],

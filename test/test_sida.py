@@ -3,7 +3,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__),os.pardir,"src"))
 import sida
 
 def test_version():
-    assert sida.__version__ == "0.0.9"
+    assert sida.__version__ == "0.1.0"
 
 def test_fullname():
     # test full name, run by travis
