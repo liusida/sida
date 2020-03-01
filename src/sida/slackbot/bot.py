@@ -73,6 +73,7 @@ def listen(number):
         return -1
     websocket.enableTrace(False)
     ws = websocket.WebSocketApp(ws_url, on_message=on_message)
+    print("Say 'channel' in the channel that you want to query, please.")
     ws.run_forever()
 
 if __name__ == "__main__":
