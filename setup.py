@@ -8,7 +8,7 @@ with open("README.md","r") as fh:
 
 setup(
     name='sida',
-    version='0.1.2',
+    version='0.1.3',
     description='My personal helper',
     py_modules=[splitext(basename(path))[0] for path in glob('src/*.py')],
     # scripts=["bin/sida"],
